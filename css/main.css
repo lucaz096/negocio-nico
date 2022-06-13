@@ -1,0 +1,282 @@
+   /* reset*/
+   *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+   
+}
+body{ 
+    background: rgb(241, 169, 101);
+    
+    
+}
+
+/*estilos del header*/
+
+
+header h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+    font-family: 'Inconsolata', monospace;
+    color: #2a775d;  
+    margin: 15px;
+    text-align: center;
+  }
+.logo{
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+}
+.logo img{
+    height: 50px;
+  
+}
+nav{
+    margin: 1rem;
+}
+nav ul {
+   display: flex;
+   justify-content: center;
+   gap: 1.5rem;
+   
+}   
+nav ul li{
+
+    list-style: none;
+    background-color: rgb(133, 125, 240);
+    border-radius: 1rem;
+    padding: 0.4rem;
+}
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
+}
+nav a:hover{
+    color: white;
+}
+ 
+  /* DISEÑO DE LA PAGINA CON GRID */
+ .contenedor{
+     display: grid;
+     grid-template-areas: "mainP mainP"
+                           "sueter buzonegro"
+                           "footer footer";
+    justify-items: center;                  
+ }
+ .nosotros{
+    display: grid;
+     grid-template-areas:"mainS mainS"
+                          "parrafo parrafo"
+                          "equipo equipo"
+                          "footer footer";
+     justify-items: center;
+                          
+}
+/*estilos de main*/
+ .mainP h2{
+     text-align: center;
+    color: #27775c;
+    text-transform: uppercase;
+    font-family: 'Inconsolata', monospace;
+    font-size: 40px;
+    margin: 50px;
+ }
+ 
+ .mainS{
+    margin: 5rem;
+    border: 4px solid black;
+    transition: 1s;
+    grid-area: mainS;
+    align-items: center;
+    text-align: center;
+    color: #27775c;
+    text-transform: uppercase;
+    font-family: 'Inconsolata', monospace;
+    font-size: 40px;
+    background-color: #f1f37c;
+   
+    
+ }
+ .equipo img{
+    height: 300px;
+    
+ }
+ .parrafo{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgb(108, 117, 247);
+  
+}
+.mainP{
+    grid-area: mainP;
+
+}
+.textoSueter{
+    color: #f03535;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.textoBuzo{
+    color: #27775c;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.sueter img{
+    margin-top: 30px;
+    height: 300px;
+}
+.sueter{
+    grid-area: sueter;
+
+}
+.buzonegro img{
+    margin-top: 30px;
+    height: 300px;
+}
+.buzonegro{
+    grid-area: buzonegro;
+    
+}
+.parrafoEquipo{
+    color: #27775c;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+.equipo img{
+     height: 300px;
+     margin-top: 30px;
+     align-items:center;
+}
+footer{
+    grid-area: footer;
+    margin-top: 10rem;
+}
+/* animaciones para desafio*/
+.mainP h2:hover{
+
+     
+    background-color: #f03535;
+    font-size: 50px;
+}
+.mainS:hover{
+    margin-top: 5rem;
+background-color: hsl(189, 85%, 74%);
+font-size: 50px;
+width: 20rem;
+height: 6rem;
+transform: rotate(360deg);
+}
+
+
+
+footer h3{
+    
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #27775c;
+}
+
+form{
+    margin-top: 300px;
+    background-color: rgb(248, 158, 83);
+}
+
+.fabrica img{
+    padding: 40px;
+    height: 400px;
+
+}
+ 
+/*MEDIA QUERIS*/
+@media screen and (min-width:320px){
+    
+   nav{
+    margin: 0.2rem;
+    text-align: center;
+   }
+        
+   nav ul {
+            display: inline-block;
+            border-radius: 1.2rem;
+            gap: 1rem;
+        }
+    .contenedor{
+        grid-template-areas: "mainP "
+                              "sueter "
+                              "buzonegro"
+                              "footer ";
+                    
+                              
+    }
+    .nosotros{
+        grid-template-areas: "mainS "
+                             "parrafo"
+                             "equipo"
+                             "footer";
+                          
+    }
+}
+
+@media screen and (min-width:600px){
+    nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        
+     }   
+     nav ul li{
+
+        list-style: none;
+        background-color: rgb(133, 125, 240);
+        border-radius: 1rem;
+        padding: 0.4rem;
+    }
+    .contenedor{
+        grid-template-areas: "mainP mainP"
+                              "sueter buzonegro"
+                              "footer footer";
+                        
+    }
+    .nosotros{
+        grid-template-areas: "mainS mainS"
+                              "sueter buzonegro"
+                              "footer footer";
+                        
+    }
+    
+}
+@media screen and (min-width:1024px){
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        
+     }   
+     nav ul li{
+
+        list-style: none;
+        background-color: rgb(133, 125, 240);
+        border-radius: 1rem;
+        padding: 0.4rem;
+    }
+    .contenedor{
+        grid-template-areas: "mainP mainP"
+                              "sueter buzonegro"
+                              "footer footer";
+                        
+}
+.nosotros{
+    grid-template-areas: "mainS mainS"
+                          "sueter buzonegro"
+                          "footer footer";
+                    
+}
+
+}
+
