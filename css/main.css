@@ -57,7 +57,7 @@ nav a{
     padding-right: 10px;
 }
 nav a:hover{
-    color: white;
+    color: rgb(245, 61, 61);
 }
  
   /* DISEÑO DE LA PAGINA CON GRID */
@@ -124,8 +124,7 @@ nav a:hover{
 }
 .mainP{
     grid-area: mainP;
-    margin: 5rem;
-
+    margin: 1rem;
     transition: 1s;
     
     align-items: center;
@@ -182,7 +181,7 @@ footer{
 
 .mainP h2:hover{
     
-    margin-top: 5rem;
+    margin-top: 3rem;
     font-size: 50px;
     transform: rotate3d(360deg);
     background-color: #b1fac3;
