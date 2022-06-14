@@ -6,7 +6,7 @@
    
 }
 body{ 
-    background: rgb(213, 243, 184);
+    background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
     
     
 }
@@ -77,14 +77,22 @@ nav a:hover{
      justify-items: center;
                           
 }
+
 /*estilos de main*/
  .mainP h2{
      text-align: center;
+     
     color: #27775c;
     text-transform: uppercase;
     font-family: 'Inconsolata', monospace;
     font-size: 40px;
-    margin: 50px;
+    margin: 5rem;
+    border: 4px solid black;
+    background-color: rgb(240, 241, 250);
+    transition: 1s;
+    
+    
+    
  }
  
  .mainS{
@@ -98,7 +106,7 @@ nav a:hover{
     text-transform: uppercase;
     font-family: 'Inconsolata', monospace;
     font-size: 40px;
-    background-color: #f1f37c;
+    background-color: #f3bb7c;
    
     
  }
@@ -118,12 +126,14 @@ nav a:hover{
 
 }
 .textoSueter{
-    color: #f03535;
+    color: #504949;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
 }
 .textoBuzo{
-    color: #27775c;
+    color: #504949;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
 }
 .sueter img{
     margin-top: 30px;
@@ -136,13 +146,14 @@ nav a:hover{
 .buzonegro img{
     margin-top: 30px;
     height: 300px;
+   
 }
 .buzonegro{
     grid-area: buzonegro;
     
 }
 .parrafoEquipo{
-    color: #27775c;
+    color: #3d4643;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
 }
@@ -157,9 +168,11 @@ footer{
 }
 /* animaciones para desafio*/
 .mainP h2:hover{
-
-     
-    background-color: #f03535;
+    
+    margin-top: 5rem;
+    font-size: 50px;
+    transform: rotate3d(360deg);
+    background-color: #b1fac3;
     font-size: 50px;
 }
 .mainS:hover{
