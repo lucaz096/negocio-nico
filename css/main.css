@@ -166,6 +166,28 @@ footer{
     grid-area: footer;
     margin-top: 10rem;
 }
+/*bootstrap desafio*/
+.subtitulocol-12{
+    text-align: center;
+    color: #db5269;
+    text-transform: uppercase;
+    margin: 1.2rem;
+}
+.navbar-brand{
+    color: #2a2b77;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+}
+.navbar-brand:hover{
+    color: rgb(233, 89, 89);
+}
+.parrafocol-12{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #504949;
+    margin-top: 2rem;
+}
+
 /* animaciones para desafio*/
 .mainP h2:hover{
     

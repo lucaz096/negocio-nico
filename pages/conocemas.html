@@ -4,63 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- tipografias -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;700&family=Rubik:ital,wght@1,500&display=swap" rel="stylesheet">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+      <!--link de mi css-->
     <link rel="stylesheet" href="../css/main.css">
     <title>Conoce Mas</title>
 </head>
 <body>
-    <header>
-        <a href="../index.html">
+    <div class="container">
+    <header class="row ">
+        <a class="col-6" href="..index.html">
             <div class="logo">
-               <img src="../img/logo.png" alt="imagen del logo">
+               <img src="/Negocio+Nico/img/logo.png" alt="imagen del logo">
                <h1 class="logo-nombre">ModaNR</h1>
             </div>
-        </a>
-        <nav>
-            <ul>
-               <li> <a href="../index.html">
-                inicio   
-               </a>                              
-                </li>
-               <li> <a href="contactos.html"> 
-                contactos
-               </a>              
-                </li>
-               <li> 
-                   <a href="productos.html">
-                    Productos
-                   </a>                  
-                </li>
-               <li><a href="nosotros.html">
-                   nosotros
-               </a>                   
-                </li>
-               <li> <a href="conocemas.html">
-                   conoce mas
-               </a>                  
-                </li>
-            </ul>
-        </nav>
+           </a>
+
+        <nav class="navbar navbar-expand-lg col-5">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/Negocio+Nico/index.html">Categorias</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../index.html">inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="productos.html">Productos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contactos.html">Contactos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link"href="nosotros.html">Nosotros</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
     </header>
-    <main>
-        <h2>conoce mas</h2>
-        <section>
-        <p>
+    <main class="row">
+        <h2 class="subtitulocol-12">Conoce Mas</h2>
+        <section class="col-12">
+        <p class="parrafocol-12">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quasi possimus dicta praesentium consequuntur nisi obcaecati, expedita cum tempore beatae, debitis dolor eaque mollitia. Rerum quaerat animi sint consequatur ex.
         </p>
     </section>
-    <section class="fabrica">
-        <img src="../img/fabrica.jpg" alt="fabrica">
+    <section class="fabrica col-12">
+        <img class="rounded mx-auto d-block img-fluid " src="../img/fabrica.jpg" alt="fabrica">
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, aspernatur eum eius consequatur nisi quasi doloribus sequi quisquam est rem autem ipsam tempore laboriosam laborum nam, quidem asperiores, blanditiis sunt!
         </p>
     </section>
     </main>
-    <footer>
-        <h3>todos los derechos reservados: NICO LUCAS</h3>
+    <footer class="row">
+        <h3 class="col-12 text-center">todos los derechos reservados: NICO LUCAS</h3>
     </footer>
+</div>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
