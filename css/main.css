@@ -21,6 +21,7 @@ header h1 {
     color: #2a775d;  
     margin: 15px;
     text-align: center;
+
   }
 .logo{
     display: flex ;
@@ -41,7 +42,7 @@ nav ul {
    
 }   
 nav ul li{
-
+    
     list-style: none;
     background-color: rgb(133, 125, 240);
     border-radius: 1rem;
@@ -63,7 +64,10 @@ nav a:hover{
   /* DISEÑO DE LA PAGINA CON GRID */
  .contenedor{
      display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: 1fr 1fr 1fr 1fr;
      grid-template-areas: "mainP mainP"
+                        "parrafoIndex parrafoIndex"
                            "sueter buzonegro"
                            "footer footer";
     justify-items: center;                  
@@ -78,7 +82,7 @@ nav a:hover{
                           
 }
 
-/*estilos de main*/
+/*estilos de main index*/
 
  .mainP h2{
      text-align: center;
@@ -87,14 +91,65 @@ nav a:hover{
     text-transform: uppercase;
     font-family: 'Inconsolata', monospace;
     font-size: 40px;
-    margin: 5rem;
+    margin: 4rem;
     border: 4px solid black;
     background-color: rgb(240, 241, 250);
     transition: 1s;
-    
-    
-    
+    grid-area: mainP;
+    align-items: center;
+
  }
+ 
+.parrafoIndex p{
+    grid-area: parrafoIndex;
+    color: #3d4643;
+    text-align: center;
+    justify-content: center;
+
+}
+.textoSueter{
+    color: #504949;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+.textoBuzo{
+    color: #504949;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+.sueter img{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin-top: 30px;
+    height: 300px;
+   
+}
+.sueter{
+    grid-area: sueter;
+
+}
+.buzonegro img{
+    margin-top: 30px;
+    height: 300px;
+   
+}
+.buzonegro{
+    grid-area: buzonegro;
+    
+}
+/* animaciones para desafio*/
+.mainP h2:hover{
+    
+    margin-top: 3rem;
+    font-size: 50px;
+    transform: rotate3d(360deg);
+    background-color: #b1fac3;
+    
+}
+
+/* estilos main nosotros*/
  
  .mainS{
     margin: 5rem;
@@ -122,47 +177,7 @@ nav a:hover{
     color: rgb(108, 117, 247);
   
 }
-.mainP{
-    grid-area: mainP;
-    margin: 1rem;
-    transition: 1s;
-    
-    align-items: center;
-    text-align: center;
-    color: #27775c;
-    text-transform: uppercase;
-    font-family: 'Inconsolata', monospace;
-    font-size: 40px;
-  
 
-}
-.textoSueter{
-    color: #504949;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-}
-.textoBuzo{
-    color: #504949;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-}
-.sueter img{
-    margin-top: 30px;
-    height: 300px;
-}
-.sueter{
-    grid-area: sueter;
-
-}
-.buzonegro img{
-    margin-top: 30px;
-    height: 300px;
-   
-}
-.buzonegro{
-    grid-area: buzonegro;
-    
-}
 .parrafoEquipo{
     color: #3d4643;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -179,15 +194,9 @@ footer{
 }
 /* animaciones para desafio*/
 
-.mainP h2:hover{
-    
-    margin-top: 3rem;
-    font-size: 50px;
-    transform: rotate3d(360deg);
-    background-color: #b1fac3;
-    
-}
+
 .mainS:hover{
+
     margin-top: 5rem;
 background-color: hsl(189, 85%, 74%);
 font-size: 50px;
@@ -218,20 +227,56 @@ form{
 }
  
 /*MEDIA QUERIS*/
-@media screen and (min-width:320px){
+@media (max-width: 420px) and (min-width:320px){
     
+    header{
+        margin: 1rem;
+    }
+    
+    nav ul li{
+        padding: 0.5rem;
+        width: 150px;
+       
+    }
    nav{
-    margin: 0.2rem;
     text-align: center;
+    margin: 1.5rem;
    }
         
    nav ul {
-            display: inline-block;
-            border-radius: 1.2rem;
-            gap: 1rem;
+           flex-direction: column;
+            border-radius: 1.4rem;
+            justify-content: center;
+            align-items: center;
+            
+        }
+            
+        
+        .mainP{
+            justify-content: center;
+            text-align: center;
+            
+            
+        }
+        .parrafoIndex{
+            text-align:center;
+            
+        }
+        #img-sueter {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        #img-buzoNegro{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
     .contenedor{
-        grid-template-areas: "mainP "
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 100px 400px 400px 400px;
+        grid-template-areas:  "mainP "
+                              "parrafoIndex"
                               "sueter "
                               "buzonegro"
                               "footer ";
@@ -247,15 +292,26 @@ form{
     }
 }
 
-@media screen and (min-width:600px){
+@media (max-width: 900px) and (min-width:600px){
     nav ul {
         display: flex;
         justify-content: center;
         gap: 1.5rem;
         
      }   
-     nav ul li{
+     #img-sueter{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
 
+     }
+     #img-buzoNegro{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+     nav ul li{
+        
         list-style: none;
         background-color: rgb(133, 125, 240);
         border-radius: 1rem;
@@ -275,7 +331,7 @@ form{
     }
     
 }
-@media screen and (min-width:1024px){
+@media (max-width: 1200px)and (min-width:1024px){
 
     nav ul {
         display: flex;
