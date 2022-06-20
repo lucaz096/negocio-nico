@@ -65,9 +65,9 @@ nav a:hover{
  .contenedor{
      display: grid;
      grid-template-columns: 1fr 1fr;
-     grid-template-rows: 1fr 1fr 1fr 1fr;
+     grid-template-rows: repeat(4, auto);
      grid-template-areas: "mainP mainP"
-                        "parrafoIndex parrafoIndex"
+                          " parrafoIndex parrafoIndex"
                            "sueter buzonegro"
                            "footer footer";
     justify-items: center;                  
@@ -83,10 +83,16 @@ nav a:hover{
 }
 
 /*estilos de main index*/
+.mainP{
+    display: flex;
+    justify-content: center;
+    grid-area: mainP;
+
+}
 
  .mainP h2{
-     text-align: center;
      
+    
     color: #27775c;
     text-transform: uppercase;
     font-family: 'Inconsolata', monospace;
@@ -95,12 +101,11 @@ nav a:hover{
     border: 4px solid black;
     background-color: rgb(240, 241, 250);
     transition: 1s;
-    grid-area: mainP;
-    align-items: center;
 
  }
  
-.parrafoIndex p{
+.parrafoIndex {
+    
     grid-area: parrafoIndex;
     color: #3d4643;
     text-align: center;
@@ -110,18 +115,22 @@ nav a:hover{
 .textoSueter{
     color: #504949;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
     text-align: center;
+
 }
 .textoBuzo{
-    color: #504949;
+    color: #4b4747;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
     text-align: center;
 }
 .sueter img{
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 30px;
     height: 300px;
    
@@ -130,7 +139,9 @@ nav a:hover{
     grid-area: sueter;
 
 }
-.buzonegro img{
+.buzonegro img{display: block;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 30px;
     height: 300px;
    
@@ -190,7 +201,7 @@ nav a:hover{
 }
 footer{
     grid-area: footer;
-    margin-top: 10rem;
+    margin-top: 12.7rem;
 }
 /* animaciones para desafio*/
 
@@ -229,60 +240,48 @@ form{
 /*MEDIA QUERIS*/
 @media (max-width: 420px) and (min-width:320px){
     
-    header{
-        margin: 1rem;
-    }
-    
-    nav ul li{
-        padding: 0.5rem;
-        width: 150px;
+    nav ul {
+      
+        flex-direction: column;
+         border-radius: 1.4rem;
+         justify-content: center;
+         align-items: center;
+         
+     }
+     nav{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: 0.5rem;
+       }
+       .sueter img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        height: 200px;
        
     }
-   nav{
-    text-align: center;
-    margin: 1.5rem;
-   }
-        
-   nav ul {
-           flex-direction: column;
-            border-radius: 1.4rem;
-            justify-content: center;
-            align-items: center;
-            
-        }
-            
-        
-        .mainP{
-            justify-content: center;
-            text-align: center;
-            
-            
-        }
-        .parrafoIndex{
-            text-align:center;
-            
-        }
-        #img-sueter {
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
-        }
-        #img-buzoNegro{
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    .contenedor{
-        grid-template-columns: 1fr;
-        grid-template-rows: 200px 100px 400px 400px 400px;
-        grid-template-areas:  "mainP "
-                              "parrafoIndex"
-                              "sueter "
-                              "buzonegro"
-                              "footer ";
-                    
-                              
+    .buzonegro img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        height: 200px;
+       
     }
+    .contenedor{
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(4,auto);
+            grid-template-areas: "mainP "
+                                 " parrafoIndex"
+                                  "sueter"
+                                  "buzonegro"
+                                  "footer";
+           justify-items: center;                  
+    }
+    
     .nosotros{
         grid-template-areas: "mainS "
                              "parrafo"
@@ -299,17 +298,7 @@ form{
         gap: 1.5rem;
         
      }   
-     #img-sueter{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-
-     }
-     #img-buzoNegro{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
+     
      nav ul li{
         
         list-style: none;
@@ -317,11 +306,30 @@ form{
         border-radius: 1rem;
         padding: 0.4rem;
     }
+    .sueter img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        height: 250px;
+       
+    }
+    .buzonegro img{display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        height: 250px;
+       
+    }
     .contenedor{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, auto);
         grid-template-areas: "mainP mainP"
+                             " parrafoIndex parrafoIndex"
                               "sueter buzonegro"
                               "footer footer";
-                        
+       justify-items: center;                  
     }
     .nosotros{
         grid-template-areas: "mainS mainS"
@@ -331,6 +339,20 @@ form{
     }
     
 }
+@media (max-width:1200px) and (min-width:1024) {
+    .contenedor{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: "mainP mainP"
+                             " parrafoIndex parrafoIndex"
+                              "sueter buzonegro"
+                              "footer footer";
+       justify-items: center;                  
+    }
+    
+}
+/*
 @media (max-width: 1200px)and (min-width:1024px){
 
     nav ul {
@@ -348,6 +370,7 @@ form{
     }
     .contenedor{
         grid-template-areas: "mainP mainP"
+                          " parrafoIndex parrafoIndex"
                               "sueter buzonegro"
                               "footer footer";
                         
@@ -359,5 +382,5 @@ form{
                     
 }
 
-}
+}*/
 
