@@ -44,13 +44,13 @@ nav ul {
 nav ul li{
     
     list-style: none;
-    background-color: rgb(133, 125, 240);
+    background-color: rgb(238, 102, 102);
     border-radius: 1rem;
     padding: 0.4rem;
 }
 a{
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(14, 13, 13);
 }
 
 nav a{
@@ -58,10 +58,10 @@ nav a{
     padding-right: 10px;
 }
 nav a:hover{
-    color: rgb(245, 61, 61);
+    color: rgb(14, 15, 15);
 }
  
-  /* DISEÑO DE LA PAGINA CON GRID */
+  /* DISEÑO DE LA PAGINA CON GRID index */
  .contenedor{
      display: grid;
      grid-template-columns: 1fr 1fr;
@@ -72,15 +72,7 @@ nav a:hover{
                            "footer footer";
     justify-items: center;                  
  }
- .nosotros{
-    display: grid;
-     grid-template-areas:"mainS mainS"
-                          "parrafo parrafo"
-                          "equipo equipo"
-                          "footer footer";
-     justify-items: center;
-                          
-}
+ 
 
 /*estilos de main index*/
 .mainP{
@@ -92,7 +84,6 @@ nav a:hover{
 
  .mainP h2{
      
-    
     color: #27775c;
     text-transform: uppercase;
     font-family: 'Inconsolata', monospace;
@@ -156,31 +147,57 @@ nav a:hover{
     margin-top: 3rem;
     font-size: 50px;
     transform: rotate3d(360deg);
-    background-color: #b1fac3;
+    background-color: #7d7fec;
     
 }
+/*estilos de nosotros*/
+.slide{
+    margin-top: 0.8rem;
+    grid-area: slide;
+
+}
+.slide img {
+height: 50vh;
+padding: 3vh;
+}
+
+.parrafo-Nosotros{
+    grid-area: parrafo-Nosotros;
+ }
+ .nosotros{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto) ;
+    grid-template-areas:"mainS"
+                        "slide"
+                        "equipo"
+                        "parrafo-Nosotros"
+                        "footer";
+                          justify-content: center;
+ }
+
+
 
 /* estilos main nosotros*/
  
  .mainS{
-    margin: 5rem;
-    border: 4px solid black;
-    transition: 1s;
-    grid-area: mainS;
-    align-items: center;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+     grid-area: mainS;
+    
+ }
+ .mainS h2{
     color: #27775c;
     text-transform: uppercase;
     font-family: 'Inconsolata', monospace;
     font-size: 40px;
-    background-color: #f3bb7c;
-   
-    
+    margin: 1rem;
+    border: 4px solid black;
+    background-color: rgb(240, 241, 250);
+    transition: 1s;
+
  }
- .equipo img{
-    height: 300px;
-    
- }
+ 
  .parrafo{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
@@ -188,17 +205,38 @@ nav a:hover{
     color: rgb(108, 117, 247);
   
 }
-
-.parrafoEquipo{
-    color: #3d4643;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.equipo{
+    grid-area: equipo;
+}
+.equipo p{
     text-align: center;
+    font-size: larger;
+    padding: 2rem;
 }
-.equipo img{
-     height: 300px;
-     margin-top: 30px;
-     align-items:center;
+.parrafo-Nosotros p{
+    margin:2rem;
+    text-align: center;
+    font-size: larger;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #4b4747;
 }
+.parrafo-Nosotros{
+    grid-area: parrafo-Nosotros;
+}
+.parrafo-Nosotros img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    height: 300px;
+}
+
+.mainS h2:hover{
+    margin-top: 3rem;
+    font-size: 50px;
+    transform: rotate3d(360deg);
+    background-color: #b1fac3;
+    }
 footer{
     grid-area: footer;
     margin-top: 12.7rem;
@@ -206,15 +244,7 @@ footer{
 /* animaciones para desafio*/
 
 
-.mainS:hover{
 
-    margin-top: 5rem;
-background-color: hsl(189, 85%, 74%);
-font-size: 50px;
-width: 20rem;
-height: 6rem;
-transform: rotate(360deg);
-}
 
 
 
@@ -273,7 +303,7 @@ form{
     .contenedor{
             display: grid;
             grid-template-columns: 100%;
-            grid-template-rows: repeat(4,auto);
+            grid-template-rows: repeat(5,auto);
             grid-template-areas: "mainP "
                                  " parrafoIndex"
                                   "sueter"
@@ -283,26 +313,49 @@ form{
     }
     
     .nosotros{
-        grid-template-areas: "mainS "
-                             "parrafo"
-                             "equipo"
-                             "footer";
-                          
+        display: grid;
+        grid-template-columns: 100% ;
+        grid-template-rows: repeat(5, auto) ;
+        grid-template-areas:"mainS"
+                            "slide"
+                            "equipo"
+                            "parrafo-Nosotros"
+                            "footer";
+                              justify-content: center;
+     }
+     .slide{
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        grid-area: slide;
+}
+    .slide img {
+        height: 16rem;
+      padding: 1vh;
+        
+       
+        }
+     .parrafo-Nosotros img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        height: 200px;
     }
 }
 
-@media (max-width: 900px) and (min-width:600px){
+@media (max-width: 900px) and (min-width:421px){
     nav ul {
         display: flex;
         justify-content: center;
-        gap: 1.5rem;
+        gap: 1rem;
         
      }   
      
      nav ul li{
         
         list-style: none;
-        background-color: rgb(133, 125, 240);
+        background-color: rgb(240, 207, 100);
         border-radius: 1rem;
         padding: 0.4rem;
     }
@@ -314,7 +367,8 @@ form{
         height: 250px;
        
     }
-    .buzonegro img{display: block;
+    .buzonegro img{
+        display: block;
         margin-left: auto;
         margin-right: auto;
         margin-top: 30px;
@@ -332,11 +386,18 @@ form{
        justify-items: center;                  
     }
     .nosotros{
-        grid-template-areas: "mainS mainS"
-                              "sueter buzonegro"
-                              "footer footer";
-                        
-    }
+        display: grid;
+        grid-template-columns: 100% ;
+        grid-template-rows: repeat(5, auto) ;
+        grid-template-areas:"mainS"
+                            "slide"
+                            "equipo"
+                            "parrafo-Nosotros"
+                            "footer";
+                              justify-content: center;
+     }
+
+    
     
 }
 @media (max-width:1200px) and (min-width:1024) {
@@ -350,37 +411,17 @@ form{
                               "footer footer";
        justify-items: center;                  
     }
-    
-}
-/*
-@media (max-width: 1200px)and (min-width:1024px){
 
-    nav ul {
-        display: flex;
-        justify-content: center;
-        gap: 1.5rem;
-        
-     }   
-     nav ul li{
-
-        list-style: none;
-        background-color: rgb(133, 125, 240);
-        border-radius: 1rem;
-        padding: 0.4rem;
-    }
-    .contenedor{
-        grid-template-areas: "mainP mainP"
-                          " parrafoIndex parrafoIndex"
-                              "sueter buzonegro"
-                              "footer footer";
-                        
+    .nosotros{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto) ;
+    grid-template-areas:"mainS"
+                        "slide"
+                        "equipo"
+                        "parrafo-Nosotros"
+                        "footer";
+                          justify-content: center;
+ }
 }
-.nosotros{
-    grid-template-areas: "mainS mainS"
-                          "sueter buzonegro"
-                          "footer footer";
-                    
-}
-
-}*/
 
