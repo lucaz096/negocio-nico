@@ -145,9 +145,9 @@ nav a:hover{
 .mainP h2:hover{
     
     margin-top: 3rem;
-    font-size: 50px;
+    font-size: 49px;
     transform: rotate3d(360deg);
-    background-color: #7d7fec;
+    background-color: #f7dcd7;
     
 }
 /*estilos de nosotros*/
