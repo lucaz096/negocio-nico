@@ -1,0 +1,189 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+body {
+  background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%); }
+
+header h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+  font-family: 'Inconsolata', monospace;
+  color: #2a775d;
+  margin: 15px;
+  text-align: center; }
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .logo img {
+    height: 50px; }
+
+nav {
+  margin: 1rem; }
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; }
+  nav li {
+    list-style: none;
+    background-color: #ee6666;
+    border-radius: 1rem;
+    padding: 0.4rem; }
+  nav a {
+    font-weight: 600;
+    padding-right: 10px; }
+
+a {
+  text-decoration: none;
+  color: #0e0d0d; }
+
+nav a:hover {
+  color: #f0f5e1; }
+
+/* DISEÑO DE LA PAGINA CON GRID index */
+.contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "mainP mainP" " parrafoIndex parrafoIndex" "sueter buzonegro" "footer footer";
+  justify-items: center; }
+
+/*estilos de main index*/
+.mainP {
+  display: flex;
+  justify-content: center;
+  grid-area: mainP; }
+  .mainP h2 {
+    color: #2a775d;
+    text-transform: uppercase;
+    font-family: 'Inconsolata', monospace;
+    font-size: 40px;
+    margin: 4rem;
+    border: 4px solid black;
+    background-color: #f0f1fa;
+    transition: 1s; }
+
+.parrafoIndex {
+  grid-area: parrafoIndex;
+  color: #3d4643;
+  text-align: center;
+  justify-content: center; }
+
+.textoBuzo {
+  color: #3d4643;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  justify-content: center;
+  text-align: center; }
+
+.sueter {
+  grid-area: sueter; }
+  .sueter img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    height: 300px; }
+  .sueter .textoSueter {
+    color: #3d4643;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: center; }
+
+.buzonegro {
+  grid-area: buzonegro; }
+  .buzonegro img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    height: 300px; }
+
+/* animaciones para desafio*/
+.mainP h2:hover {
+  margin-top: 3rem;
+  font-size: 49px;
+  transform: rotate3d(360deg);
+  background-color: #f7dcd7; }
+
+footer {
+  grid-area: footer;
+  margin-top: 12.7rem; }
+  footer h3 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #27775c; }
+
+/*MEDIA QUERIS*/
+@media (max-width: 420px) and (min-width: 320px) {
+  nav {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0.5rem; }
+    nav ul {
+      flex-direction: column;
+      border-radius: 1.4rem;
+      justify-content: center;
+      align-items: center; }
+  .sueter img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    height: 200px; }
+  .buzonegro img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    height: 200px; }
+  .contenedor {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "mainP " " parrafoIndex" "sueter" "buzonegro" "footer";
+    justify-items: center; } }
+
+@media (max-width: 900px) and (min-width: 421px) {
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; }
+    nav ul li {
+      list-style: none;
+      background-color: #f0cf64;
+      border-radius: 1rem;
+      padding: 0.4rem; }
+  .sueter img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    height: 250px; }
+  .buzonegro img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    height: 250px; }
+  .contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "mainP mainP" " parrafoIndex parrafoIndex" "sueter buzonegro" "footer footer";
+    justify-items: center; } }
+
+@media (max-width: 1200px) and (min-width: 1024) {
+  .contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "mainP mainP" " parrafoIndex parrafoIndex" "sueter buzonegro" "footer footer";
+    justify-items: center; } }
