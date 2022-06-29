@@ -210,7 +210,7 @@ padding: 3vh;
 .equipo{
     grid-area: equipo;
 }
-.equipo p{
+ p{
     text-align: center;
     font-size: larger;
     padding: 2rem;
@@ -286,7 +286,7 @@ form{
         text-align: center;
         margin: 0.5rem;
        }
-       .sueter img{
+     .sueter img{
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -313,7 +313,7 @@ form{
                                   "footer";
            justify-items: center;                  
     }
-    
+    /*page nosotros*/
     .nosotros{
         display: grid;
         grid-template-columns: 100% ;
