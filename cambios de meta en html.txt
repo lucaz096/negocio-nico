@@ -1,0 +1,17 @@
+cambios en etiquetas meta
+meta del index
+<meta name="description"content="Bienvenidos a Moda NR, tienda de ropa online, venta de buzos, remeras, camperas">
+<meta name="keywords"content=" Moda NR, tienda de ropa, buzos,comprar buzos, sueters, comprar sueter">
+meta de page productos
+<meta name="description"content="Productos, tienda de ropa online, ropa de primera calidad, venta de remeras, buzos, camperas de primera calidad">
+<meta name="keywords"content=" productos, remeras, comprar remeras, buzos,comprar buzos, sueters, comprar sueter, camperas, comprar camperas">
+meta de page nosotros
+<meta name="description"content="Nosotros, somos una pyme familiar con más de 5 años brindando nuestro servicio de venta de ropa">
+<meta name="keywords"content=" Nosotros, Quienes somos,equipo de trabajo, a que nos dedicamos">
+meta de page contactos
+<meta name="description"content=" Podés contactarnos mediante unos de los medios que tenemos (redes, teléfono) en la página">
+<meta name="keywords"content=" contactos, nuestras redes, ubicacion,telefono">
+meta de page conoce mas
+<meta name="description"content="Conoce más de nosotros, y el tiempo que tenemos en este rubro">
+<meta name="keywords"content=" conoce mas, quienes somos ">
+

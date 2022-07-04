@@ -22,7 +22,7 @@ header h1 {
   text-align: center; }
 
 body {
-  background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%); }
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%); }
 
 .logo {
   display: flex;
@@ -105,7 +105,7 @@ nav a:hover {
     justify-content: center;
     text-align: center; }
 
-/* animaciones para desafio*/
+/* animaciones */
 .mainP h2:hover {
   margin-top: 3rem;
   font-size: 49px;
@@ -119,7 +119,7 @@ footer {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
-    color: #27775c; }
+    color: #070707; }
 
 /*estilos de nosotros*/
 .slide {
@@ -182,6 +182,59 @@ footer {
   grid-area: footer;
   margin-top: 12.7rem; }
 
+/*PAGE CONOCE MAS*/
+.fabrica {
+  grid-area: fabrica; }
+  .fabrica img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 35vh;
+    padding: 3vh; }
+  .fabrica .textoFabrica {
+    display: flex;
+    justify-content: center;
+    text-align: center; }
+
+.fabrica-dos {
+  grid-area: fabrica-dos; }
+  .fabrica-dos img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 35vh;
+    padding: 3vh; }
+  .fabrica-dos .textoFabricados {
+    display: flex;
+    justify-content: center;
+    text-align: center; }
+
+.parrafo-conocemas {
+  grid-area: parrafo-conocemas; }
+  .parrafo-conocemas p {
+    margin: 2rem;
+    text-align: center;
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #4b4747; }
+
+.banner-conocemas {
+  grid-area: banner-conocemas; }
+  .banner-conocemas img {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 35vh;
+    padding: 3vh; }
+
+.conoceMas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "banner-conocemas banner-conocemas" "parrafo-conocemas parrafo-conocemas" "fabrica fabrica-dos" "footer footer";
+  justify-items: center; }
+
 /*MEDIA QUERIS*/
 @media (max-width: 420px) and (min-width: 320px) {
   nav {
@@ -232,7 +285,38 @@ footer {
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
-    height: 200px; } }
+    height: 200px; }
+  /*page conoce mas*/
+  .conoceMas {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "banner-conocemas " "parrafo-conocemas " "fabrica" "fabrica-dos" "footer";
+    justify-items: center; }
+  .banner-conocemas img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px; }
+  .fabrica img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 35vh;
+    padding: 3vh; }
+  .fabrica .textoFabrica {
+    padding: 1rem;
+    text-align: center; }
+  .fabrica-dos img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    height: 35vh;
+    padding: 3vh; }
+  .fabrica-dos .textoFabricados {
+    padding: 1rem;
+    text-align: center; } }
 
 @media (max-width: 900px) and (min-width: 421px) {
   nav ul {
@@ -268,7 +352,14 @@ footer {
     grid-template-columns: 100%;
     grid-template-rows: repeat(5, auto);
     grid-template-areas: "mainS" "slide" "equipo" "parrafo-Nosotros" "footer";
-    justify-content: center; } }
+    justify-content: center; }
+  /*page conoce mas*/
+  .conoceMas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "banner-conocemas banner-conocemas" "parrafo-conocemas parrafo-conocemas" "fabrica fabrica-dos" "footer footer";
+    justify-items: center; } }
 
 @media (max-width: 1200px) and (min-width: 1024) {
   .contenedor {
@@ -283,4 +374,11 @@ footer {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
     grid-template-areas: "mainS" "slide" "equipo" "parrafo-Nosotros" "footer";
-    justify-content: center; } }
+    justify-content: center; }
+  /*page conoce mas*/
+  .conoceMas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "banner-conocemas banner-conocemas" "parrafo-conocemas parrafo-conocemas" "fabrica fabrica-dos" "footer footer";
+    justify-items: center; } }
