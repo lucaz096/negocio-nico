@@ -8,9 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- tipografias -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;700&family=Rubik:ital,wght@1,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/main.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;700&family=Montserrat:wght@300;400;700&family=Rubik:ital,wght@1,500&display=swap" rel="stylesheet">
+     <!--css-->
+    <link rel="stylesheet" href="../css/style.css">
     <title>Contactos</title>
 </head>
 <body>    
@@ -54,42 +55,14 @@
     </p>
     </section>
     </main>
-    <form action="">
-        <fieldset>
-            <legend>Formulario de contactos</legend>
-
-            <div>
-                <label for="Nombre">
-                    completa tu Nombre
-                </label>
-                <input type="text" name="nombre" placeholder="Tu Nombre">
-    
-            </div>
-            
-
-            <div>
-                <label for="mail">
-                     completa tu email
-                </label>
-                <input type="email" name="mail" placeholder="completa tu email">
-            </div>
-            <div>
-                <label for="telefono">
-                     numero de telefono
-                </label>
-                <input type="number" name="numero de telefono" placeholder="telefono">
-            </div>
-            <div>
-                <label for="mensaje">
-                    mensaje
-                </label>
-                <input type="text" name="message" placeholder="mensaje">
-            </div>
-            <div>
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Borrar">
-            </div>
-        </fieldset>
+    <form class="form">
+        <div class="form__container">
+        <h3 class="form__container">Contactame</h3>
+            <input type="text" class="form__input" placeholder="Nombre">
+         <input type="email" class="form__input" placeholder="Email">
+            <textarea class="form__input form__input--message" placeholder="Mensaje"></textarea>
+            <input type="submit" value="Enviar" class="form__cta">
+        </div>
     </form>
     <footer>
         <h3>todos los derechos reservados: NICO LUCAS</h3>

@@ -319,7 +319,17 @@ img{
                           "footer footer";
    justify-items: center;                  
 }
-
+/*PAGE CONTACTOS*/
+.form{
+    font-family: 'Montserrat', sans-serif; 
+    background-color: #faf8f6;
+}
+.form__input{
+    font-family: 'Montserrat', sans-serif;
+}
+.form__cta{
+  font-family:'Montserrat', sans-serif;
+}
 /*MEDIA QUERIS*/
 @media (max-width: 420px) and (min-width:320px){
     
@@ -413,15 +423,17 @@ img{
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 350px;
+        width: 40vh;
+        padding: 1vh;
+        height: 20vh;
     }
     .fabrica{
         img{
             display: block;
             margin-left: auto;
             margin-right: auto;
-            height: 35vh;
-            padding: 3vh;
+            height: 30vh;
+            padding: 2vh;
            
         }
         .textoFabrica{
@@ -436,8 +448,8 @@ img{
                 margin-left: auto;
                 margin-right: auto;
                 margin-top: 30px;
-                height: 35vh;
-                padding: 3vh;
+                height: 30vh;
+                padding: 2vh;
             }
             .textoFabricados{
                padding: 1rem;
