@@ -1,0 +1,41 @@
+<input class="form-input" type="text" name="nombre" value="" placeholder="Nombre" required="">
+
+
+<fieldset>
+            <legend>Formulario de contactos</legend>
+
+            <div>
+                <label for="Nombre">
+                    completa tu Nombre
+                </label>
+                <input type="text" name="nombre" placeholder="Tu Nombre">
+    
+            </div>
+            
+
+            <div>
+                <label for="mail">
+                     completa tu email
+                </label>
+                <input type="email" name="mail" placeholder="completa tu email">
+            </div>
+            <div>
+                <label for="telefono">
+                     numero de telefono
+                </label>
+                <input type="number" name="numero de telefono" placeholder="telefono">
+            </div>
+            <div>
+                <label for="mensaje">
+                    mensaje
+                </label>
+                <input type="text" name="message" placeholder="mensaje">
+            </div>
+            <div>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Borrar">
+            </div>
+        </fieldset>
+
+
+contrase;a:@w(!58l!m3@vdqTF@4JW

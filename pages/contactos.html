@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- tipografias -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;700&family=Montserrat:wght@300;400;700&family=Rubik:ital,wght@1,500&display=swap" rel="stylesheet">
+    
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
      <!--css-->
     <link rel="stylesheet" href="../css/style.css">
     <title>Contactos</title>
@@ -49,21 +49,29 @@
         </nav>
     </header>
     <main>
-    <section>
         <h2>Contactos</h2>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni veniam itaque voluptatum aspernatur voluptate eligendi neque dolorem obcaecati temporibus fuga culpa expedita veritatis ipsa natus, quam ratione est rerum similique.
+    <p> Nos podes contactar por Nuestras redes sociales. 
     </p>
-    </section>
     </main>
-    <form class="form">
-        <div class="form__container">
-        <h3 class="form__container">Contactame</h3>
-            <input type="text" class="form__input" placeholder="Nombre">
-         <input type="email" class="form__input" placeholder="Email">
-            <textarea class="form__input form__input--message" placeholder="Mensaje"></textarea>
-            <input type="submit" value="Enviar" class="form__cta">
+    <form class="formularioContactos">
+        <div class="form">
+           <h3 class="tituloFormulario">Formulario</h3>
+            <div class="grupo">
+                <input type="text" name="" id="" required><span class="barra"></span>
+                <label>Nombre</label>
+            </div>
+            <div class="grupo">
+                <input type="email" name="" id="" required><span class="barra"></span>
+                <label>Email</label>
+            </div>
+            <div class="grupo">
+                <textarea name="" id="" rows="3" required></textarea><span class="barra"></span>
+                <label>Mensaje</label>
+            </div>
+            <button type="submit">Enviar</button>
         </div>
     </form>
+    
     <footer>
         <h3>todos los derechos reservados: NICO LUCAS</h3>
     </footer>

@@ -62,7 +62,7 @@ nav{
      li{
     
         list-style: none;
-        background-color: rgb(238, 102, 102);
+        background-color: #ee6666;
         border-radius: 1rem;
         padding: 0.4rem;
     }
@@ -320,16 +320,103 @@ img{
    justify-items: center;                  
 }
 /*PAGE CONTACTOS*/
+.formularioContactos{
+    font-family: 'Poppins', sans-serif;
+    width: 80%;
+    height:420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.tituloFormulario{
+    text-align: center;
+}
+form{
+    background: #fff;
+    width: 30%;
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+}
+
 .form{
-    font-family: 'Montserrat', sans-serif; 
-    background-color: #faf8f6;
+    width: 100%;
+    margin: auto;
 }
-.form__input{
-    font-family: 'Montserrat', sans-serif;
+
+form .grupo{
+    position: relative;
+    margin: 45px;
 }
-.form__cta{
-  font-family:'Montserrat', sans-serif;
+
+input, textarea{
+    background: none;
+    color:#c6c6c6;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border:none;
+    border-bottom: 1px solid var(--colorTextos);
+    resize: none;
 }
+
+input:focus,textarea:focus{
+    outline: none;
+    color: rgb(94,93,93);
+}
+input:focus~label, 
+input:valid~label, 
+textarea:focus~label, textarea:valid~label{
+    position: absolute;
+    top: -14px;
+    font-size: 12px;
+    color: #080808;
+}
+
+label{
+    color: var(--colorTextos);
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    top:10px;
+    transition: 0.5s ease all;
+    pointer-events: none;
+}
+
+
+input:focus~.barra::before, textarea:focus~.barra::before{
+    width: 100%;
+}
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.barra::before{
+    content: '';
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, #0c0c0c, #FC5C7D);
+    transition: 0.3s ease all;
+    left: 0%;
+}
+button{
+    background:#ee6666;
+    display: block;
+    width: 100px;
+    height: 40px;
+    border:none;
+    color:rgb(12, 12, 12); 
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
 /*MEDIA QUERIS*/
 @media (max-width: 420px) and (min-width:320px){
     
