@@ -17,7 +17,7 @@ header h1 {
   font-size: 60px;
   text-transform: uppercase;
   font-family: 'Inconsolata', monospace;
-  color: #2a775d;
+  color: #0d0e0d;
   margin: 15px;
   text-align: center; }
 
@@ -238,7 +238,7 @@ footer {
 /*PAGE CONTACTOS*/
 .formularioContactos {
   font-family: 'Poppins', sans-serif;
-  width: 80%;
+  width: 50%;
   height: 420px;
   display: flex;
   justify-content: center;
@@ -247,6 +247,10 @@ footer {
 
 .tituloFormulario {
   text-align: center; }
+
+.contactos {
+  text-align: center;
+  margin: 2rem; }
 
 form {
   background: #fff;

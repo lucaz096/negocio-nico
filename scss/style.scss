@@ -322,7 +322,7 @@ img{
 /*PAGE CONTACTOS*/
 .formularioContactos{
     font-family: 'Poppins', sans-serif;
-    width: 80%;
+    width: 50%;
     height:420px;
     display: flex;
     justify-content: center;
@@ -331,6 +331,10 @@ img{
 }
 .tituloFormulario{
     text-align: center;
+}
+.contactos{
+    text-align: center;
+    margin: 2rem;
 }
 form{
     background: #fff;
