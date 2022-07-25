@@ -4,7 +4,7 @@
   padding: 0px;
   box-sizing: border-box; }
 
-.mainP h2, .mainS h2 {
+.mainP h2 {
   color: #0e0d0d;
   text-transform: uppercase;
   font-family: 'Inconsolata', monospace;
@@ -39,7 +39,7 @@ nav {
     gap: 1.5rem; }
   nav li {
     list-style: none;
-    background-color: #ee6666;
+    background-color: #0a0a0a;
     border-radius: 1rem;
     padding: 0.4rem; }
   nav a {
@@ -48,17 +48,76 @@ nav {
 
 a {
   text-decoration: none;
-  color: #0e0d0d; }
+  color: #fdfbfb; }
 
 nav a:hover {
-  color: #f0f5e1; }
+  color: #e2d1c3; }
+
+/*page Productos*/
+.camperaNegra {
+  grid-area: camperaNegra; }
+  .camperaNegra img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    height: 300px;
+    border-radius: 2rem; }
+
+.remeraNegra {
+  grid-area: remeraNegra; }
+  .remeraNegra img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    height: 300px;
+    border-radius: 2rem; }
+
+.remeraBlanca {
+  grid-area: remeraBlanca; }
+  .remeraBlanca img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    height: 300px;
+    border-radius: 2rem; }
+
+section p {
+  margin: 2rem;
+  text-align: center;
+  font-size: medium;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #4b4747; }
+
+section img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  height: 300px;
+  border-radius: 2rem; }
+
+.textoProductos {
+  text-transform: uppercase;
+  font-family: 'Inconsolata', monospace;
+  text-align: center;
+  grid-area: textoProductos; }
+
+.productos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "banners banners" "textoProductos textoProductos" "buzonegro camperaNegra" "remeraNegra remeraBlanca" "footer footer";
+  justify-items: center; }
 
 /* DISEÑO DE LA PAGINA CON GRID index */
 .contenedor {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: repeat(4, auto);
-  grid-template-areas: "mainP mainP" " parrafoIndex parrafoIndex" "sueter buzonegro" "footer footer";
+  grid-template-areas: "banners " "nosotrosUno " " parrafoIndex " "footer ";
   justify-items: center; }
 
 /*estilos de main index*/
@@ -69,26 +128,21 @@ nav a:hover {
   .mainP h2 {
     margin: 4rem; }
 
+.nosotrosUno {
+  grid-area: nosotrosUno; }
+  .nosotrosUno img {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 70vh;
+    padding: 3vh; }
+
 .parrafoIndex {
   grid-area: parrafoIndex;
   color: #3d4643;
   text-align: center;
   justify-content: center; }
-
-.sueter {
-  grid-area: sueter; }
-  .sueter img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
-    height: 300px; }
-  .sueter .textoSueter {
-    color: #3d4643;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;
-    justify-content: center;
-    text-align: center; }
 
 .buzonegro {
   grid-area: buzonegro; }
@@ -97,7 +151,8 @@ nav a:hover {
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
-    height: 300px; }
+    height: 300px;
+    border-radius: 2rem; }
   .buzonegro .textoBuzo {
     color: #3d4643;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -105,45 +160,37 @@ nav a:hover {
     justify-content: center;
     text-align: center; }
 
-/* animaciones */
-.mainP h2:hover {
-  margin-top: 3rem;
-  font-size: 49px;
-  transform: rotate3d(360deg);
-  background-color: #f7dcd7; }
-
 footer {
+  text-align: center;
   grid-area: footer;
   margin-top: 12.7rem; }
+  footer img {
+    height: 20px;
+    margin: 0.5rem 1rem 0rem 1rem; }
   footer h3 {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
     color: #070707; }
 
 /*estilos de nosotros*/
 .slide {
+  margin: auto;
   margin-top: 0.8rem;
   grid-area: slide; }
   .slide img {
-    height: 65vh;
-    padding: 3vh; }
+    height: 350px;
+    width: 100% !important;
+    border-radius: 2rem; }
 
 .nosotros {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, auto);
-  grid-template-areas: "mainS" "slide" "equipo" "parrafo-Nosotros" "footer";
+  grid-template-areas: "banners" "slide" "equipo" "parrafo-Nosotros" "footer";
   justify-content: center; }
 
 /*page nosotros*/
-.mainS {
-  display: flex;
-  justify-content: center;
-  grid-area: mainS; }
-  .mainS h2 {
-    margin: 1rem; }
-
 .parrafo {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
@@ -153,9 +200,11 @@ footer {
 .equipo {
   grid-area: equipo; }
   .equipo p {
+    margin: 2rem;
     text-align: center;
     font-size: larger;
-    padding: 2rem; }
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #4b4747; }
 
 .parrafo-Nosotros {
   grid-area: parrafo-Nosotros; }
@@ -170,17 +219,8 @@ footer {
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
-    height: 300px; }
-
-.mainS h2:hover {
-  margin-top: 3rem;
-  font-size: 50px;
-  transform: rotate3d(360deg);
-  background-color: #b1fac3; }
-
-footer {
-  grid-area: footer;
-  margin-top: 12.7rem; }
+    height: 300px;
+    border-radius: 3rem; }
 
 /*PAGE CONOCE MAS*/
 .fabrica {
@@ -202,7 +242,7 @@ footer {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 35vh;
+    height: 60vh;
     padding: 3vh; }
   .fabrica-dos .textoFabricados {
     display: flex;
@@ -218,9 +258,9 @@ footer {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #4b4747; }
 
-.banner-conocemas {
-  grid-area: banner-conocemas; }
-  .banner-conocemas img {
+.banners {
+  grid-area: banners; }
+  .banners img {
     display: flex;
     justify-content: center;
     margin-left: auto;
@@ -230,13 +270,21 @@ footer {
 
 .conoceMas {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: repeat(4, auto);
-  grid-template-areas: "banner-conocemas banner-conocemas" "parrafo-conocemas parrafo-conocemas" "fabrica fabrica-dos" "footer footer";
+  grid-template-areas: " banners " "parrafo-conocemas " " fabrica-dos" "footer ";
   justify-items: center; }
 
 /*PAGE CONTACTOS*/
+.contactos {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: " banners " "formularioContactos" "footer ";
+  justify-items: center; }
+
 .formularioContactos {
+  grid-area: formularioContactos;
   font-family: 'Poppins', sans-serif;
   width: 50%;
   height: 420px;
@@ -246,6 +294,8 @@ footer {
   margin: auto; }
 
 .tituloFormulario {
+  margin: 10px 0;
+  font-weight: 800;
   text-align: center; }
 
 .contactos {
@@ -265,7 +315,7 @@ form {
 
 form .grupo {
   position: relative;
-  margin: 45px; }
+  margin: 55px; }
 
 input, textarea {
   background: none;
@@ -276,7 +326,8 @@ input, textarea {
   width: 100%;
   border: none;
   border-bottom: 1px solid var(--colorTextos);
-  resize: none; }
+  resize: none;
+  text-align: center; }
 
 input:focus, textarea:focus {
   outline: none;
@@ -286,7 +337,7 @@ input:focus ~ label,
 input:valid ~ label,
 textarea:focus ~ label, textarea:valid ~ label {
   position: absolute;
-  top: -14px;
+  top: -10px;
   font-size: 12px;
   color: #080808; }
 
@@ -295,7 +346,7 @@ label {
   font-size: 16px;
   position: absolute;
   left: 5px;
-  top: 10px;
+  top: 15px;
   transition: 0.5s ease all;
   pointer-events: none; }
 
@@ -318,19 +369,21 @@ input:focus ~ .barra::before, textarea:focus ~ .barra::before {
   left: 0%; }
 
 button {
-  background: #ee6666;
+  background: #2e2d2d;
   display: block;
   width: 100px;
   height: 40px;
   border: none;
-  color: #0c0c0c;
+  color: #fcf9f9;
   border-radius: 4px;
   font-size: 16px;
   margin: 10px auto;
   cursor: pointer; }
 
 /*MEDIA QUERIS*/
-@media (max-width: 420px) and (min-width: 320px) {
+@media (max-width: 700px) and (min-width: 320px) {
+  header h1 {
+    font-size: 50px; }
   nav {
     display: flex;
     justify-content: center;
@@ -341,30 +394,42 @@ button {
       border-radius: 1.4rem;
       justify-content: center;
       align-items: center; }
-  .sueter img {
-    display: block;
+  .parrafoIndex {
+    grid-area: parrafoIndex;
+    color: #3d4643;
+    text-align: center;
+    font-size: 0.8rem; }
+  .nosotrosUno img {
+    display: flex;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30px;
+    width: 350px;
     height: 200px; }
-  .buzonegro img {
+  .banners img {
     display: block;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30px;
+    width: 350px;
     height: 200px; }
+  footer h3 {
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    color: #070707; }
   .contenedor {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: repeat(5, auto);
-    grid-template-areas: "mainP " " parrafoIndex" "sueter" "buzonegro" "footer";
+    grid-template-areas: "banners " "nosotrosUno " " parrafoIndex " "footer ";
     justify-items: center; }
   /*page nosotros*/
   .nosotros {
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(5, auto);
-    grid-template-areas: "mainS" "slide" "equipo" "parrafo-Nosotros" "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "banners" "slide" "equipo" "parrafo-Nosotros" "footer";
     justify-content: center; }
   .slide {
     display: flex;
@@ -372,20 +437,42 @@ button {
     margin-top: 1rem;
     grid-area: slide; }
     .slide img {
-      height: 16rem;
-      padding: 1vh; }
+      width: 350px;
+      height: 200px; }
+  .equipo p {
+    text-align: center;
+    font-size: 0.8rem; }
+  .parrafo-Nosotros p {
+    font-size: 0.8rem; }
   .parrafo-Nosotros img {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    width: 350px;
+    height: 200px; }
+  /*page productos*/
+  .productos {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas: "banners " "textoProductos " "buzonegro"  "camperaNegra" "remeraNegra" "remeraBlanca" "footer ";
+    justify-items: center; }
+  .camperaNegra img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
-    height: 200px; }
+    height: 300px;
+    border-radius: 3rem; }
+  section p {
+    text-align: center; }
   /*page conoce mas*/
   .conoceMas {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: repeat(5, auto);
-    grid-template-areas: "banner-conocemas " "parrafo-conocemas " "fabrica" "fabrica-dos" "footer";
+    grid-template-areas: "banners " "parrafo-conocemas " "fabrica" "fabrica-dos" "footer";
     justify-items: center; }
   .banner-conocemas img {
     display: block;
@@ -412,57 +499,118 @@ button {
     padding: 2vh; }
   .fabrica-dos .textoFabricados {
     padding: 1rem;
-    text-align: center; } }
+    text-align: center; }
+  /*page contactos*/
+  .contactos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: " banners " "formularioContactos" "footer ";
+    justify-items: center; }
+  .formularioContactos {
+    display: block;
+    width: 90%;
+    height: 450px; } }
 
-@media (max-width: 900px) and (min-width: 421px) {
+@media (max-width: 950px) and (min-width: 701px) {
   nav ul {
     display: flex;
     justify-content: center;
     gap: 1rem; }
     nav ul li {
       list-style: none;
-      background-color: #f0cf64;
       border-radius: 1rem;
       padding: 0.4rem; }
-  .sueter img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
-    height: 250px; }
-  .buzonegro img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
-    height: 250px; }
   .contenedor {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
-    grid-template-areas: "mainP mainP" " parrafoIndex parrafoIndex" "sueter buzonegro" "footer footer";
+    grid-template-areas: "banners " "nosotrosUno " " parrafoIndex " "footer ";
     justify-items: center; }
+  .parrafoIndex {
+    grid-area: parrafoIndex;
+    color: #3d4643;
+    text-align: center;
+    font-size: 0.8rem; }
+  .nosotrosUno img {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 300px;
+    border-radius: 3rem; }
+  .banners img {
+    display: block;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 750px;
+    height: 200px; }
+  footer h3 {
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem;
+    color: #070707; }
   /*page nosotros*/
   .nosotros {
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(5, auto);
-    grid-template-areas: "mainS" "slide" "equipo" "parrafo-Nosotros" "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "banners" "slide" "equipo" "parrafo-Nosotros" "footer";
     justify-content: center; }
+  .slide {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    grid-area: slide; }
+    .slide img {
+      width: 450px;
+      height: 400px; }
+  .equipo p {
+    margin: 2rem;
+    text-align: center;
+    font-size: larger;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #4b4747; }
+  .parrafo-Nosotros img {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    width: 450px;
+    height: 300px; }
   /*page conoce mas*/
   .conoceMas {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
-    grid-template-areas: "banner-conocemas banner-conocemas" "parrafo-conocemas parrafo-conocemas" "fabrica fabrica-dos" "footer footer";
-    justify-items: center; } }
+    grid-template-areas: " banners " "parrafo-conocemas " " fabrica-dos" "footer ";
+    justify-items: center; }
+  .fabrica-dos img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 350px;
+    padding: 5px; }
+  /*page contactos*/
+  .contactos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: " banners " "formularioContactos" "footer ";
+    justify-items: center; }
+  .formularioContactos {
+    display: block;
+    width: 80%;
+    height: 450px; } }
 
 @media (max-width: 1200px) and (min-width: 1024) {
   .contenedor {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
-    grid-template-areas: "mainP mainP" " parrafoIndex parrafoIndex" "sueter buzonegro" "footer footer";
+    grid-template-areas: "banners " "nosotrosUno " " parrafoIndex " "footer ";
     justify-items: center; }
   /*page nosotros*/
   .nosotros {
@@ -474,7 +622,7 @@ button {
   /*page conoce mas*/
   .conoceMas {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
-    grid-template-areas: "banner-conocemas banner-conocemas" "parrafo-conocemas parrafo-conocemas" "fabrica fabrica-dos" "footer footer";
+    grid-template-areas: " banners " "parrafo-conocemas " " fabrica-dos" "footer ";
     justify-items: center; } }
