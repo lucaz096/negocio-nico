@@ -167,7 +167,7 @@ section{
 .nosotrosUno{
     grid-area:nosotrosUno ;
     img{
-        display:flex;
+    display:flex;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
@@ -418,6 +418,7 @@ form .grupo{
     position: relative;
     margin: 55px;
 }
+
 
 input, textarea{
     background: none;
@@ -701,6 +702,16 @@ button{
         width: 90%;
         height: 450px;
     }
+    form .grupo{
+        position: relative;
+        margin: 50px;
+        font-size: medium;
+        ::placeholder{
+            text-align: end;
+            font-size: 1.5vh;
+        }
+    }
+    
 }
 @media (max-width: 950px) and (min-width: 701px){
     nav ul {

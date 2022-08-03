@@ -510,7 +510,14 @@ button {
   .formularioContactos {
     display: block;
     width: 90%;
-    height: 450px; } }
+    height: 450px; }
+  form .grupo {
+    position: relative;
+    margin: 50px;
+    font-size: medium; }
+    form .grupo ::placeholder {
+      text-align: end;
+      font-size: 1.5vh; } }
 
 @media (max-width: 950px) and (min-width: 701px) {
   nav ul {
