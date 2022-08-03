@@ -85,6 +85,7 @@ nav a:hover{
     img{
         @include imgropa(block,auto ,auto ,30px ,300px );
         border-radius: 2rem;
+        
      }
 }
 .remeraNegra{
@@ -852,6 +853,7 @@ button{
     }
 }
 @media (max-width:1200px) and (min-width:1024) {
+    /*incio*/
     .contenedor{
         display: grid;
         grid-template-columns: 1fr ;
@@ -883,6 +885,28 @@ button{
                              "parrafo-conocemas "
                               " fabrica-dos"
                               "footer ";
+       justify-items: center;                  
+    }
+    /*page contactos*/
+    .contactos{
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: " banners "
+                             "formularioContactos"
+                              "footer ";
+       justify-items: center;        
+    }
+    /*page productos*/
+    .productos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: "banners banners"
+                             "textoProductos textoProductos"
+                              "buzonegro camperaNegra"
+                              "remeraNegra remeraBlanca"
+                              "footer footer";
        justify-items: center;                  
     }
 }
