@@ -93,6 +93,108 @@ while (opciones != "4") {
 
   }
   */
+ class Ropa{
+    constructor(id,prenda,stock,precio){
+    this.id= id;
+    this.prenda= prenda;
+    this.stock= stock;
+    this.precio= precio;
+}
+ }
+ let Ropa= new ropa(1,"buzo",12,5000)
+ let Ropa= new ropa(1,"campera",10,8000)
+ let Ropa= new ropa(1,"remera",18,2000)
+ let Ropa= new ropa(1,"pantalon",18,8000)
+ let Ropa= new ropa(1,"short",11,3000)
+
+ let Ropa = [Ropa1,Ropa2,Ropa3,Ropa4,Ropa5]
+ 
+ let carrito = [];
+
+ const mostrarProductos = () => {
+    let mensaje = "Elije la ropa que quieras:"
+   ropa.forEach(prenda => {
+        mensaje += `
+            Opción ${prenda.id}: ${prenda.prenda} - Stock: ${prenda.stock} - $${prenda.precio}`
+    })
+    mensaje += `
+            Opción 0: No comprar nada`
+    //Opcion para pasar la opción como la marca (Deconmentar lo de abajo nada mas)
+    // let opcion = prompt(mensaje).toLowerCase();
+
+    //Opcion para pasar la opción como id
+    let opcion = Number(prompt(mensaje))
+
+
+    return opcion;
+}
+
+
+let comprar = true;
+
+while (comprar) {
+    let opcion = mostrarProductos()
+
+
+
+    //Opcion para buscar por marca (Deconmentar lo de abajo nada mas)
+    // let celularElegido = celulares.find(celu => celu.marca.toLowerCase() === opcion)
+
+
+    //Opcion para buscar por id
+    // let celularElegido = celulares.find(celu => celu.id === opcion)
+
+    // if (celularElegido) {
+    //     console.log(celularElegido);
+    // } else {
+    //     console.log('No lo encontramos');
+    // }
+
+
+    if (opcion >= 1 && opcion <= 5) {
+        let idumentariaElegida = idumentaria.find(ropa => ropa.id === opcion)
+        if (carrito.length === 0) {
+            celularElegido.cantidad = 1;
+            celularElegido.stock--;
+            carrito.push(celularElegido)
+        } else {
+            let celuEnCarrito = carrito.find(celu => celu.id === opcion)
+            if (celuEnCarrito) {
+                celuEnCarrito.cantidad++;
+                celuEnCarrito.stock--;
+                if (celuEnCarrito.stock === 0) {
+                    celulares = celulares.filter(celu => celu.id != opcion)
+                }
+            } else {
+                celularElegido.cantidad = 1;
+                celularElegido.stock--;
+                carrito.push(celularElegido)
+
+            }
+        }
+    } else {
+        comprar = false;
+    }
+}
+
+const mostrarTotalCarrito = () => {
+    let mensajeCarrito = "";
+    if (carrito.length > 0) {
+        carrito.forEach(celu => {
+            mensajeCarrito += `
+                Marca: ${celu.marca} - Cantidad: ${celu.cantidad} - Total: $${celu.cantidad * celu.precio}
+            `
+        })
+        mensajeCarrito += `Total Carrito: ${carrito.reduce((total,celu) => total + (celu.precio * celu.cantidad),0)}`
+        alert(mensajeCarrito)
+    } else {
+        mensajeCarrito += 'No hay productos en el carrito'
+        alert(mensajeCarrito)
+    }
+}
+
+mostrarTotalCarrito()
+
 
 
   function CrearListado()
