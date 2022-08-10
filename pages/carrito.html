@@ -13,6 +13,40 @@
       <!--link de mi css-->
     <link rel="stylesheet" href="../css/style.css">
     <title>Conoce Mas</title>
+    <script src="../archivojs/main.js"></script>
+    <!-- La idea es crear un simulador de compras para ropa -->
+    
+   
+     <script type="text/javascript">
+       
+        alert("Bienvenidos a Moda NR");
+   
+        solicitarNombre();
+        solicitarEmail();
+        //ropaTemporada();
+        //probarCodigo(); 
+   
+   
+        const objeto1 = { id: 1, producto: "buzo" };
+           const array   = [objeto1, { id: 2, producto: "campera" }];
+           array.push({ id: 3, producto: "Pantalon" });
+   
+           const productos = [{ id: 1, producto: "buzo" },
+                     { id: 2,  producto: "campera" },
+                     { id: 3,  producto: "Pantalon" }];
+   
+           for (const producto of productos) {
+               console.log(producto.id);
+               console.log(producto.producto);
+           }
+   
+           CrearListado();
+   
+   
+       
+   
+      
+     </script>
 </head>
 <body>
     <header>
@@ -52,23 +86,19 @@
             </ul>
         </nav>
     </header>
+<div class="carrito">
 
-<div class="conoceMas">
-    
-    <main class="banners">
-        <img src="../img/ConoceMas.png" alt="banner-conocemas">
-    </main>
-        <section class="parrafo-conocemas">
-        <p>
-            Somos Una pime Familiar dedicada a La fabricacion de Ropa para Hombres.
-        </p>
-    </section>
-    <section class="fabrica-dos">
-        <img src="../img/imagen-fabrica-tres.jpg" alt="imagendefacbricasdemodanr">
-        <p class="textoFabricados">
-            contamos con Talleres especializados en La Fabricacion de ropa, con gente capacitada. 
-        </p>
-    </section>
+<main class="cuadroCarrito">
+    <form>
+     <img src="../img/carrito.png" alt="carrito">
+      <h1 class="carrito-boton">probar simulador de compras</h1>
+  
+     
+     <button type="button" onclick=" solicitarNombre();"  class="btn btn-primary">Tester</button>
+  
+      <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
+    </form>
+ </main>
   
     <footer>
         <div class="footer-img">

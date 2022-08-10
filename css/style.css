@@ -380,6 +380,36 @@ button {
   margin: 10px auto;
   cursor: pointer; }
 
+/*page carrito*/
+.cuadroCarrito {
+  display: flex;
+  justify-content: center;
+  width: 150px; }
+
+.carrito-boton {
+  text-align: center;
+  font-size: small; }
+
+.carrito {
+  grid-area: carrito;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: " carrito" "footer ";
+  justify-items: center;
+  justify-content: center; }
+  .carrito form {
+    display: block;
+    justify-content: center;
+    width: 440PX;
+    text-align: center; }
+
+form {
+  display: block;
+  justify-content: center; }
+  form img {
+    width: 50px; }
+
 /*MEDIA QUERIS*/
 @media (max-width: 700px) and (min-width: 320px) {
   header h1 {
