@@ -17,6 +17,7 @@ function solicitarEmail(){
     console.log("Su mail es: " + ingreseEmail);
     return ingreseEmail;
 }
+solicitarEmail();
 /*function ropaTemporada(){
 let invierno;
 let verano;
@@ -162,7 +163,7 @@ const mostrarTotalCarrito = () => {
     }
 }
 
-mostrarTotalCarrito()
+mostrarTotalCarrito();
 
 
 
