@@ -12,20 +12,6 @@ function solicitarNombre(){
     console.log("Su nombre es: " + ingreseNombre);
     return ingreseNombre; 
 } */
-
-function solicitarNombre() {
-
-    const listaNombres = [];
-    let   cantidad     = 1;
-    do{
-       let entrada = prompt("Ingresar nombre");
-       listaNombres.push(entrada.toUpperCase());
-       console.log(listaNombres.length);
-    }while(listaNombres.length != cantidad)
-    const nuevaLista = listaNombres.concat(["LUCAS","MANUEL"]);
-
-    alert(nuevaLista.join("\n"));
-}
 function solicitarEmail(){
     let ingreseEmail = prompt("Ingrese su Email");
     console.log("Su mail es: " + ingreseEmail);
@@ -93,7 +79,7 @@ while (opciones != "4") {
 
   }
   */
- class Ropa{
+ class Ropa {
     constructor(id,prenda,stock,precio){
     this.id= id;
     this.prenda= prenda;
@@ -101,21 +87,21 @@ while (opciones != "4") {
     this.precio= precio;
 }
  }
- let Ropa= new ropa(1,"buzo",12,5000)
- let Ropa= new ropa(1,"campera",10,8000)
- let Ropa= new ropa(1,"remera",18,2000)
- let Ropa= new ropa(1,"pantalon",18,8000)
- let Ropa= new ropa(1,"short",11,3000)
+ let ropa1= new Ropa(1,"buzo",12,5000)
+ let ropa2= new Ropa(2,"campera",10,8000)
+ let ropa3= new Ropa(3,"remera",18,2000)
+ let ropa4= new Ropa(4,"pantalon",18,8000)
+ let ropa5= new Ropa(5,"short",11,3000)
 
- let Ropa = [Ropa1,Ropa2,Ropa3,Ropa4,Ropa5]
+ let ropa = [ropa1,ropa2,ropa3,ropa4,ropa5]
  
  let carrito = [];
 
  const mostrarProductos = () => {
     let mensaje = "Elije la ropa que quieras:"
-   ropa.forEach(prenda => {
+   ropa.forEach(idumentaria => {
         mensaje += `
-            Opción ${prenda.id}: ${prenda.prenda} - Stock: ${prenda.stock} - $${prenda.precio}`
+            Opción ${idumentaria.id}: ${idumentaria.prenda} - Stock: ${idumentaria.stock} - $${idumentaria.precio}`
     })
     mensaje += `
             Opción 0: No comprar nada`
@@ -134,41 +120,24 @@ let comprar = true;
 
 while (comprar) {
     let opcion = mostrarProductos()
-
-
-
-    //Opcion para buscar por marca (Deconmentar lo de abajo nada mas)
-    // let celularElegido = celulares.find(celu => celu.marca.toLowerCase() === opcion)
-
-
-    //Opcion para buscar por id
-    // let celularElegido = celulares.find(celu => celu.id === opcion)
-
-    // if (celularElegido) {
-    //     console.log(celularElegido);
-    // } else {
-    //     console.log('No lo encontramos');
-    // }
-
-
     if (opcion >= 1 && opcion <= 5) {
-        let idumentariaElegida = idumentaria.find(ropa => ropa.id === opcion)
+        let ropaElegido = ropa.find(idumentaria => idumentaria.id === opcion)
         if (carrito.length === 0) {
-            celularElegido.cantidad = 1;
-            celularElegido.stock--;
-            carrito.push(celularElegido)
+            ropaElegido.cantidad = 1;
+            ropaElegido.stock--;
+            carrito.push(ropaElegido)
         } else {
-            let celuEnCarrito = carrito.find(celu => celu.id === opcion)
-            if (celuEnCarrito) {
-                celuEnCarrito.cantidad++;
-                celuEnCarrito.stock--;
-                if (celuEnCarrito.stock === 0) {
-                    celulares = celulares.filter(celu => celu.id != opcion)
+            let ropaEnCarrito = carrito.find(idumentaria => idumentaria.id === opcion)
+            if (ropaEnCarrito) {
+                ropaEnCarrito.cantidad++;
+                ropaEnCarrito.stock--;
+                if (ropaEnCarrito.stock === 0) {
+                    ropa = ropa.filter(idumentaria => idumentaria.id != opcion)
                 }
             } else {
-                celularElegido.cantidad = 1;
-                celularElegido.stock--;
-                carrito.push(celularElegido)
+                ropaElegido.cantidad = 1;
+                ropaElegido.stock--;
+                carrito.push(ropaElegido)
 
             }
         }
@@ -180,12 +149,12 @@ while (comprar) {
 const mostrarTotalCarrito = () => {
     let mensajeCarrito = "";
     if (carrito.length > 0) {
-        carrito.forEach(celu => {
+        carrito.forEach(idumentaria => {
             mensajeCarrito += `
-                Marca: ${celu.marca} - Cantidad: ${celu.cantidad} - Total: $${celu.cantidad * celu.precio}
+                prenda: ${idumentaria.prenda} - Cantidad: ${idumentaria.cantidad} - Total: $${idumentaria.cantidad * idumentaria.precio}
             `
         })
-        mensajeCarrito += `Total Carrito: ${carrito.reduce((total,celu) => total + (celu.precio * celu.cantidad),0)}`
+        mensajeCarrito += `Total Carrito: ${carrito.reduce((total,ropa) => total + (ropa.precio * ropa.cantidad),0)}`
         alert(mensajeCarrito)
     } else {
         mensajeCarrito += 'No hay productos en el carrito'
@@ -197,7 +166,7 @@ mostrarTotalCarrito()
 
 
 
-  function CrearListado()
+ /* function CrearListado()
   {
       
       const ListadoProductos = [];
@@ -285,3 +254,4 @@ mostrarTotalCarrito()
     }
 
 }
+*/
