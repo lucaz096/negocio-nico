@@ -1,4 +1,38 @@
+class usuario{
 
+    constructor(nombre, apellido, usuario){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.usuario = usuario;
+
+    }
+}
+
+function menu(){
+    alert(`Bienvenidos a Moda NR`);
+    let opcion;
+    while(){
+        let (opcion !=){
+         let opcion = parseInt(pront(`ingrese la opcion deseada
+                              1- Agregar usuario
+                              2- Modificar usuario
+                              3- Eliminar usuario
+                              4- Mostrar usuario
+                              5- Salir`));    
+        switch(opcion){
+            case 1:
+                agregarUsuario();
+                break;
+        }
+
+        }
+    }
+
+}
+function agregarUsuario(){
+    
+
+}
 /*let ingreseNombre
 function solicitarNombre(){
     let cliente;
